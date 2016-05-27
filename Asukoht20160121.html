@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="est">
+    <head>
+        <title>Veski Turist</title>
+        <link rel="stylesheet" href="styles20160121.css">
+    </head>
+    <body>
+        <h2 style="font-size:160%;">Asukoht</h2>
+        <!-- Lisada asukoha kaart -->
+        <a href="Harj20160121.html">Avalehele</a>
+        <br>
+        <br>
+        <br>
+        <button type="button" onclick="naitaTalu()">Talu</button>
+        <button type="button" onclick="naitaKyla()">Küla</button>
+        <p id="asukoht"> 0 </p>
+        <p>Google kaart.</p>
+        <script>
+            function naitaTalu(){    
+                           var asukoht = {talu:"Veskimäe", kyla:"Uugla", vald:"Lääne-Nigula", maakond:"Läänemaa", riik:"Eesti", regioon:"Läänemere", maailmajagu:"Euroopa"};
+              		document.getElementById("asukoht").innerHTML = asukoht.talu;		
+            }
+            function naitaKyla(){    
+                           var asukoht = {talu:"Veskimäe", kyla:"Uugla", vald:"Lääne-Nigula", maakond:"Läänemaa", riik:"Eesti", regioon:"Läänemere", maailmajagu:"Euroopa"};
+              		document.getElementById("asukoht").innerHTML = asukoht.kyla;		
+            }
+            
+            
+        </script>
+    </body>
+</html>

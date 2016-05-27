@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="est">
+    <head>
+        <title>Veski Turist</title>
+        <link rel="stylesheet" href="styles20160121.css">
+        <a href="Tutvustus20160121.html">Tutvustus</a>
+        <a href="Kontaktid20160121.html">Kontaktid</a>
+        <a href="Teenused20160121.html">Teenused</a>			
+        <a href="ladu.php">Broneering</a>
+        <a href="Galerii20160121.html">Galerii</a>
+        <a href="Sündmused20160121.html">Sündmused</a>
+        <a href="Lingid20160121.html">Lingid</a>
+        <a href="Harj20160121.html">Avalehele</a>
+    </head>
+    <body>
+        <h2>Sündmuste kalender</h2>
+        <br>
+        <br>
+        <br>
+        <table>
+            <caption>Soovituslik sündmuste kalender</caption>
+            <tr>
+                <th>Sündmus</th>
+                <th>Kuupäev</th>
+                <th><button type="button" onclick="vordleDate()">Staatus</button></th>
+            </tr>
+            <tr>
+                <td>Viimsi taluturg</td>
+                <td id="viimsiPaev">2015-10-11</td>
+                <td id="staatusViimsi">check</td>
+            </tr>
+            <tr>
+            <tr>
+                <td>Vanamõisa laat</td>
+                <td id="vanamoisaPaev">2016-08-11</td>
+                <td id="staatusVanamoisa">check</td>
+            </tr>
+            <tr>
+                <td>Saku tantsupäev</td>
+                <td id="sakuPaev">2016-01-16</td>
+                <td id="staatusSaku">check</td>
+            </tr>
+        </table>
+        <script>
+            function vordleDate() {
+                /*Sündmuste päevad*/
+            var viimsiPaev = new Date();
+            viimsiPaev.setFullYear(2015, 09, 11);
+            document.getElementById("viimsiPaev").innerHTML = "2015-10-11";
+            var vanamoisaPaev = new Date();
+            vanamoisaPaev.setFullYear(2016, 07, 11);
+            document.getElementById("vanamoisaPaev").innerHTML = "2016-08-11";
+            var sakuPaev = new Date();
+            sakuPaev.setFullYear(2016, 00, 16);
+            document.getElementById("sakuPaev").innerHTML = "2016-01-16";
+            
+                var today, text;
+                today = new Date();
+            
+            
+                if (viimsiPaev > today) {
+                   text = "Uus";
+                } else {
+                   text = "Vana";
+                }
+                document.getElementById("staatusViimsi").innerHTML = text;
+            
+                if (vanamoisaPaev > today) {
+                   text = "Uus";
+                } else {
+                   text = "Vana";
+                }
+                document.getElementById("staatusVanamoisa").innerHTML = text;
+                
+                if (sakuPaev > today) {
+                   text = "Uus";
+                } else {
+                   text = "Vana";
+                }
+                document.getElementById("staatusSaku").innerHTML = text;
+            }
+            
+        </script>
+    </body>
+</html>
+
